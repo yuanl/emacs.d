@@ -10,5 +10,7 @@
 
 (load-theme 'solarized t)
 
+(sanityinc/enable-ivy-flx-matching)
+
 (provide 'init-local)
 ;;; init-local.el ends here
