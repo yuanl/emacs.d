@@ -3,7 +3,11 @@
 ;;; Code:
 
 (add-to-list 'custom-theme-load-path
-             (expand-file-name "emacs-color-theme-solarized" user-emacs-directory))
+             (expand-file-name
+              "emacs-color-theme-solarized" user-emacs-directory))
+
+(add-hook 'after-init-hook 'toggle-frame-maximized)
+
 (load-theme 'solarized t)
 
 (provide 'init-local)
