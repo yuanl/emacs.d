@@ -12,5 +12,10 @@
 
 (sanityinc/enable-ivy-flx-matching)
 
+(maybe-require-package 'arduino-mode)
+
+(when (maybe-require-package 'ace-window)
+  (global-set-key (kbd "M-o") 'ace-window))
+
 (provide 'init-local)
 ;;; init-local.el ends here
