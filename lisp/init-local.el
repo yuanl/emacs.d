@@ -13,9 +13,10 @@
 
 (when (maybe-require-package 'pipenv)
   (add-hook 'python-mode-hook #'pipenv-mode)
-  (setq
-   pipenv-projectile-after-switch-function
-   #'pipenv-projectile-after-switch-extended))
+  ;; (setq
+  ;;  pipenv-projectile-after-switch-function
+  ;;  #'pipenv-projectile-after-switch-extended)
+  )
 
 (provide 'init-local)
 ;;; init-local.el ends here
