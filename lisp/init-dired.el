@@ -14,6 +14,7 @@
 
 (after-load 'dired
   (setq dired-recursive-deletes 'top)
+  (put 'dired-find-alternate-file 'disabled nil)
   (define-key dired-mode-map [mouse-2] 'dired-find-file)
   (define-key dired-mode-map (kbd "C-c C-q") 'wdired-change-to-wdired-mode))
 
