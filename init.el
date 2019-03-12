@@ -185,4 +185,3 @@
 ;; no-byte-compile: t
 ;; End:
 ;;; init.el ends here
-(put 'dired-find-alternate-file 'disabled nil)
