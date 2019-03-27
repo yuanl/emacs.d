@@ -28,8 +28,14 @@
     (:name "Size" :inline t)
     (file-size-human-readable (buffer-size))))
 
+(defun yuanl/ibuffer-cleanup-tramp ()
+  "Clean up all tramp buffer and refresh all buffer list"
+  (interactive)
+  (tramp-cleanup-all-buffers)
+  (ibuffer-update nil))
+
 (after-load 'ibuffer
-  (define-key ibuffer-mode-map (kbd "C-c t") 'tramp-cleanup-all-buffers))
+  (define-key ibuffer-mode-map (kbd "C-c t") 'yuanl/ibuffer-cleanup-tramp))
 
 ;; Modify the default ibuffer-formats (toggle with `)
 (setq ibuffer-formats
