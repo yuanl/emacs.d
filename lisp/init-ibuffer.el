@@ -28,6 +28,8 @@
     (:name "Size" :inline t)
     (file-size-human-readable (buffer-size))))
 
+(after-load 'ibuffer
+  (define-key ibuffer-mode-map (kbd "C-c t") 'tramp-cleanup-all-buffers))
 
 ;; Modify the default ibuffer-formats (toggle with `)
 (setq ibuffer-formats
