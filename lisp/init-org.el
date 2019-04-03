@@ -133,11 +133,17 @@ typical word processor."
 
 (global-set-key (kbd "C-c c") 'org-capture)
 
+(require 'org-protocol)
+
 (setq org-capture-templates
       `(("t" "todo" entry (file "")  ; "" => `org-default-notes-file'
          "* NEXT %?\n%U\n" :clock-resume t)
         ("n" "note" entry (file "")
          "* %? :NOTE:\n%U\n%a\n" :clock-resume t)
+        ("p" "Protocol" entry (file "")
+         "* %^{Title}\nSource: %u, %c\n#+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+        ("L" "Protocol Link" entry (file "")
+         "* TODO %? [[%:link][%:description]] \nCaptured On: %U")
         ))
 
 
