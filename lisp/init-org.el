@@ -314,6 +314,15 @@ typical word processor."
 
 
 
+;;; Org jira
+
+(maybe-require-package 'org-jira)
+(after-load 'org-jira
+  (setq jiralib-url "http://jira.sonymobile.net/"
+        org-jira-working-dir "~/org")
+  )
+
+
 ;;; Show the clocked-in task - if any - in the header line
 (defun sanityinc/show-org-clock-in-header-line ()
   (setq-default header-line-format '((" " org-mode-line-string " "))))
