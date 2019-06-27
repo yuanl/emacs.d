@@ -19,6 +19,7 @@
 (setq-default switch-window-shortcut-style 'alphabet)
 (setq-default switch-window-timeout nil)
 (global-set-key (kbd "C-x o") 'switch-window)
+(global-set-key (kbd "s-o") 'switch-window)
 
 
 ;;----------------------------------------------------------------------------

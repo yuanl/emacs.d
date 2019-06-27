@@ -10,9 +10,6 @@
 
 (maybe-require-package 'vue-mode)
 
-(when (maybe-require-package 'ace-window)
-  (global-set-key (kbd "M-o") 'ace-window))
-
 (when (maybe-require-package 'pipenv)
   (add-hook 'python-mode-hook #'pipenv-mode)
   ;; (setq
