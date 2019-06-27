@@ -8,6 +8,8 @@
 
 (maybe-require-package 'arduino-mode)
 
+(maybe-require-package 'vue-mode)
+
 (when (maybe-require-package 'ace-window)
   (global-set-key (kbd "M-o") 'ace-window))
 
