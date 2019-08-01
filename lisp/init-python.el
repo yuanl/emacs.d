@@ -9,8 +9,12 @@
 
 (require-package 'pip-requirements)
 
+(maybe-require-package 'blacken)
+
 (when (maybe-require-package 'anaconda-mode)
   (after-load 'python
+    (setq python-shell-interpreter-args "--simple-prompt -i")
+    (add-hook 'python-mode-hook 'blacken-mode)
     (add-hook 'python-mode-hook 'anaconda-mode)
     (add-hook 'python-mode-hook 'anaconda-eldoc-mode))
   (after-load 'anaconda-mode
