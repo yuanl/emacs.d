@@ -10,12 +10,6 @@
 
 (maybe-require-package 'vue-mode)
 
-(when (maybe-require-package 'pipenv)
-  (add-hook 'python-mode-hook #'pipenv-mode)
-  ;; (setq
-  ;;  pipenv-projectile-after-switch-function
-  ;;  #'pipenv-projectile-after-switch-extended)
-  )
 
 (setq tramp-default-method "ssh")
 
