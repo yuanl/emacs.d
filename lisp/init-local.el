@@ -10,6 +10,8 @@
 
 (maybe-require-package 'vue-mode)
 
+(when (maybe-require-package 'elfeed-goodies)
+  (elfeed-goodies/setup))
 
 (setq tramp-default-method "ssh")
 
