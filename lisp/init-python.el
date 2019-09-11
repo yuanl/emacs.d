@@ -10,6 +10,7 @@
 (require-package 'pip-requirements)
 
 (maybe-require-package 'blacken)
+(maybe-require-package 'pyvenv)
 
 (when (maybe-require-package 'anaconda-mode)
   (after-load 'python
