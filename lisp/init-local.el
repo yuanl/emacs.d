@@ -15,7 +15,7 @@
 
 (setq tramp-default-method "ssh")
 
-(when (require 'mu4e)
+(when (require 'mu4e nil 'noerror)
   (setq
    mail-user-agent 'mu4e-user-agent
    mu4e-get-mail-command "offlineimap"
