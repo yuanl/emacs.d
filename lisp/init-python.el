@@ -19,6 +19,7 @@
 
 (when (maybe-require-package 'anaconda-mode)
   (after-load 'python
+    (setq python-shell-interpreter "ipython")
     (setq python-shell-interpreter-args "--simple-prompt -i")
     (add-hook 'python-mode-hook 'blacken-mode)
     ;; Anaconda doesn't work on remote servers without some work, so
