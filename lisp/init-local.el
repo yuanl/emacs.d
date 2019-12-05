@@ -10,6 +10,8 @@
 
 (maybe-require-package 'vue-mode)
 
+(maybe-require-package 'protobuf-mode)
+
 (when (maybe-require-package 'elfeed-goodies)
   (elfeed-goodies/setup))
 
