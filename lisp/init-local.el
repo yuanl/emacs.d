@@ -4,18 +4,19 @@
 
 (add-hook 'after-init-hook 'toggle-frame-maximized)
 
-(sanityinc/enable-ivy-flx-matching)
-
-(maybe-require-package 'arduino-mode)
+(after-load 'ivy
+  (sanityinc/enable-ivy-flx-matching))
 
 (maybe-require-package 'vue-mode)
 
 (maybe-require-package 'protobuf-mode)
 
 (when (maybe-require-package 'elfeed-goodies)
-  (elfeed-goodies/setup))
+  (after-load 'elfeed
+    (elfeed-goodies/setup)))
 
-(setq tramp-default-method "ssh")
+(after-load 'tramp
+  (setq tramp-default-method "ssh"))
 
 (global-set-key (kbd "s-t") 'eshell)
 
