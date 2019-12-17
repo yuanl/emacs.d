@@ -73,14 +73,14 @@
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
-;;(require 'init-sessions)
+(require 'init-sessions)
 (require 'init-mmm)
 
 (require 'init-editing-utils)
 (require 'init-whitespace)
 
 (require 'init-vc)
-(require 'init-darcs)
+;; (require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
 
@@ -101,6 +101,7 @@
 ;;(require 'init-haml)
 (require 'init-http)
 (require 'init-python)
+(require 'init-arduino)
 ;;(require 'init-haskell)
 ;;(require 'init-elm)
 ;;(require 'init-purescript)
