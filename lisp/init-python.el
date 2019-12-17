@@ -19,24 +19,8 @@
 
 (when (maybe-require-package 'eglot)
   (after-load 'python
-    (setq python-shell-interpreter "ipython")
-    (setq python-shell-interpreter-args "--simple-prompt -i")
     (add-hook 'python-mode-hook 'eglot-ensure)
-    (add-hook 'python-mode-hook 'blacken-mode)
-    ;; ;; Anaconda doesn't work on remote servers without some work, so
-    ;; ;; by default we enable it only when working locally.
-    ;; (add-hook 'python-mode-hook
-    ;;           (lambda () (unless (file-remote-p default-directory)
-    ;;                   (anaconda-mode 1))))
-    ;; (add-hook 'anaconda-mode-hook 'anaconda-eldoc-mode)
-    )
-  ;; (after-load 'anaconda-mode
-  ;;   (define-key anaconda-mode-map (kbd "M-?") nil))
-  ;; (when (maybe-require-package 'company-anaconda)
-  ;;   (after-load 'company
-  ;;     (after-load 'python
-  ;;       (push 'company-anaconda company-backends))))
-  )
+    (add-hook 'python-mode-hook 'blacken-mode)))
 
 
 (provide 'init-python)
