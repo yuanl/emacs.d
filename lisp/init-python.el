@@ -15,9 +15,8 @@
 
 (require-package 'pip-requirements)
 
-(maybe-require-package 'blacken)
-
 (when (maybe-require-package 'eglot)
+  (maybe-require-package 'blacken)
   (after-load 'python
     (add-hook 'python-mode-hook 'eglot-ensure)
     (add-hook 'python-mode-hook 'blacken-mode)))
