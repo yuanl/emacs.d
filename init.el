@@ -72,6 +72,7 @@
 ;;(require 'init-helm)
 (require 'init-hippie-expand)
 (require 'init-company)
+(require 'init-yasnippet)
 (require 'init-windows)
 (require 'init-sessions)
 (require 'init-mmm)
