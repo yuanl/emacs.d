@@ -23,6 +23,10 @@
     (add-hook 'python-mode-hook 'eglot-ensure)
     (add-hook 'python-mode-hook 'blacken-mode)))
 
+;;; clone shim to site-lisp
+(when (require 'shim)
+  (shim-init-python)
+  (add-hook 'python-mode-hook #'shim-mode))
 
 (provide 'init-python)
 ;;; init-python.el ends here
