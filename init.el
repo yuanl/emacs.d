@@ -79,6 +79,7 @@
 
 (require 'init-editing-utils)
 (require 'init-whitespace)
+(require 'init-pyim)
 
 (require 'init-vc)
 ;; (require 'init-darcs)
