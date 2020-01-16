@@ -24,7 +24,8 @@
     (add-hook 'python-mode-hook 'blacken-mode)))
 
 ;;; clone shim to site-lisp
-(when (require 'shim)
+(when (and (executable-find "pyenv")
+           (require 'shim nil 'noerror))
   (shim-init-python)
   (add-hook 'python-mode-hook #'shim-mode))
 
