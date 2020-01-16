@@ -12,6 +12,9 @@
 (maybe-require-package 'protobuf-mode)
 
 (when (maybe-require-package 'elfeed-goodies)
+  (when (maybe-require-package 'elfeed-org)
+    (elfeed-org)
+    (setq rmh-elfeed-org-files (list "~/org/nas/elfeed.org")))
   (after-load 'elfeed
     (elfeed-goodies/setup)))
 
