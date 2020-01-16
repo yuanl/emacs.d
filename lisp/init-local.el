@@ -23,7 +23,15 @@
 
 (global-set-key (kbd "s-t") 'eshell)
 
-                                        ; clone eaf to ~/.emacs.d/site-lisp
+(unless (eq system-type 'windows-nt)
+  (when (maybe-require-package 'vterm)
+    (global-set-key (kbd "C-s-t") 'vterm)
+    (setq vterm-shell "/usr/bin/fish")
+    ))
+
+(global-set-key (kbd "s-b") 'ivy-switch-buffer)
+
+;;; eaf to ~/.emacs.d/site-lisp
 (when (eq system-type "gnu/linux")
   (require 'eaf nil 'noerror))
 
