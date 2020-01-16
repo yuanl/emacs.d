@@ -9,7 +9,7 @@
         mu4e-update-interval 300
         mu4e-view-show-images t)
 
-  (setq user-full-name  "Leonard Li"
+  (setq user-full-name  "Li, Leonard"
         user-mail-address "leonard.li@sony.com"
         mu4e-user-mail-address-list '("leonard.li@sony.com"
                                       "leonard.li@sonymobile.com")
@@ -24,6 +24,7 @@
   (setq mu4e-maildir-shortcuts
         '( ("/sony/INBOX" . ?i)
            ))
+  (global-set-key (kbd "s-m") 'mu4e)
   )
 
 (provide 'init-mail)
