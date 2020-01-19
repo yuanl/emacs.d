@@ -32,7 +32,7 @@
 (global-set-key (kbd "s-b") 'ivy-switch-buffer)
 
 ;;; eaf to ~/.emacs.d/site-lisp
-(when (eq system-type "gnu/linux")
+(when (eq system-type 'gnu/linux)
   (require 'eaf nil 'noerror))
 
 (provide 'init-local)

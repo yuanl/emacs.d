@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(when (and (eq system-type "gnu/linux")
+(when (and (eq system-type 'gnu/linux)
            (maybe-require-package 'pyim))
   (require 'pyim)
   (require 'pyim-basedict)
