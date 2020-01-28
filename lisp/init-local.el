@@ -26,7 +26,7 @@
 (unless (eq system-type 'windows-nt)
   (when (maybe-require-package 'vterm)
     (global-set-key (kbd "C-s-t") 'vterm)
-    (setq vterm-shell "/usr/bin/fish")
+    (setq vterm-shell (executable-find "fish"))
     ))
 
 (global-set-key (kbd "s-b") 'ivy-switch-buffer)
