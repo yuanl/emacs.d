@@ -36,5 +36,9 @@
 (when (eq system-type 'gnu/linux)
   (require 'eaf nil 'noerror))
 
+(when (maybe-require-package 'org2ctex)
+  (require 'org2ctex)
+  (org2ctex-toggle t))
+
 (provide 'init-local)
 ;;; init-local.el ends here
