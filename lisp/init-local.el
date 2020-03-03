@@ -3,6 +3,7 @@
 ;;; Code:
 
 (add-hook 'after-init-hook 'toggle-frame-maximized)
+(global-unset-key (kbd "C-SPC"))
 
 (after-load 'ivy
   (sanityinc/enable-ivy-flx-matching))
