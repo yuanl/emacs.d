@@ -4,6 +4,7 @@
 
 (add-hook 'after-init-hook 'toggle-frame-maximized)
 (global-unset-key (kbd "C-SPC"))
+(setq default-directory "~/")
 
 (after-load 'ivy
   (sanityinc/enable-ivy-flx-matching))

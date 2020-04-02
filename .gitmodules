@@ -4,3 +4,6 @@
 [submodule "site-lisp/shim"]
 	path = site-lisp/shim
 	url = https://github.com/twlz0ne/shim.el.git
+[submodule "site-lisp/nox"]
+	path = site-lisp/nox
+	url = https://github.com/manateelazycat/nox.git

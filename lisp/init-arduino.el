@@ -5,12 +5,10 @@
 
 (when (maybe-require-package 'arduino-mode)
   (add-to-list 'auto-mode-alist '("\\.cpp\\'" . arduino-mode))
-  (when (and (maybe-require-package 'eglot)
-             (maybe-require-package 'platformio-mode))
+  (when (maybe-require-package 'platformio-mode)
     (after-load 'arduino-mode
       (require 'platformio-mode)
-      (platformio-mode 1)
-      (eglot-ensure))))
+      (platformio-conditionally-enable))))
 
-(provide 'init-arduino)
+  (provide 'init-arduino)
 ;;; init-arduino.el ends here
