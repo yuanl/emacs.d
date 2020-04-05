@@ -2,9 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 
-(when (maybe-require-package 'company-posframe)
-  (require 'company-posframe)
-  (require 'nox)
+(when (require 'nox)
   (define-key nox-mode-map (kbd "C-M-/") 'nox-show-doc))
 
 (dolist (hook (list
