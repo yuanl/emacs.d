@@ -13,7 +13,7 @@
 ;;; set default font ASAP
 (set-face-attribute 'default nil
                     :family "Sarasa Mono SC"
-                    :height 118)
+                    :height 140)
 
 ;; So we can detect this having been loaded
 (provide 'early-init)
