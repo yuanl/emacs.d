@@ -2,7 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
-(when (and (eq system-type 'gnu/linux)
+(when (and (or (eq system-type 'gnu/linux)
+               (eq system-type 'darwin))
            (maybe-require-package 'pyim))
   (require 'pyim)
   (require 'pyim-basedict)
@@ -15,7 +16,7 @@
     (require 'posframe)
     (setq pyim-page-tooltip 'posframe))
 
-  (pyim-isearch-mode 1))
+  (pyim-isearch-mode -1))
 
 
 (provide 'init-pyim)
