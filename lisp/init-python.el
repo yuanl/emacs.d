@@ -27,5 +27,8 @@
   (shim-init-python)
   (add-hook 'python-mode-hook #'shim-mode))
 
+(when (maybe-require-package 'reformatter)
+  (reformatter-define black :program "black"))
+
 (provide 'init-python)
 ;;; init-python.el ends here
