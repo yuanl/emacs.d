@@ -6,8 +6,8 @@
 (global-unset-key (kbd "C-SPC"))
 (setq default-directory "~/")
 
-(after-load 'ivy
-  (sanityinc/enable-ivy-flx-matching))
+;; (with-eval-after-load 'ivy
+;;   (sanityinc/enable-ivy-flx-matching))
 
 (maybe-require-package 'vue-mode)
 
@@ -17,10 +17,10 @@
   (when (maybe-require-package 'elfeed-org)
     (elfeed-org)
     (setq rmh-elfeed-org-files (list "~/org/nas/elfeed.org")))
-  (after-load 'elfeed
+  (with-eval-after-load 'elfeed
     (elfeed-goodies/setup)))
 
-(after-load 'tramp
+(with-eval-after-load 'tramp
   (setq tramp-default-method "ssh"))
 
 (global-set-key (kbd "s-t") 'eshell)

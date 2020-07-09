@@ -294,7 +294,7 @@ typical word processor."
 ;;; Org jira
 
 (maybe-require-package 'org-jira)
-(after-load 'org-jira
+(with-eval-after-load 'org-jira
   (setq jiralib-url "http://jira.sonymobile.net/"
         org-jira-working-dir "~/org")
   )

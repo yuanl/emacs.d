@@ -6,7 +6,7 @@
 (when (maybe-require-package 'arduino-mode)
   (add-to-list 'auto-mode-alist '("\\.cpp\\'" . arduino-mode))
   (when (maybe-require-package 'platformio-mode)
-    (after-load 'arduino-mode
+    (with-eval-after-load 'arduino-mode
       (require 'platformio-mode)
       (platformio-conditionally-enable))))
 

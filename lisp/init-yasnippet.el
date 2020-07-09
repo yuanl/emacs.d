@@ -34,7 +34,7 @@
 
   (when (maybe-require-package 'yasnippet-snippets)
     (add-hook 'after-init-hook 'yas-global-mode))
-  (after-load 'yasnippet
+  (with-eval-after-load 'yasnippet
     (diminish 'yas-minor-mode)))
 
 (provide 'init-yasnippet)

@@ -34,7 +34,7 @@
   (tramp-cleanup-all-buffers)
   (ibuffer-update nil))
 
-(after-load 'ibuffer
+(with-eval-after-load 'ibuffer
   (define-key ibuffer-mode-map (kbd "C-c t") 'yuanl/ibuffer-cleanup-tramp))
 
 ;; Modify the default ibuffer-formats (toggle with `)

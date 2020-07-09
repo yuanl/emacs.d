@@ -18,7 +18,7 @@
 (require-package 'pip-requirements)
 
 (when (maybe-require-package 'blacken)
-  (after-load 'python
+  (with-eval-after-load 'python
     (add-hook 'python-mode-hook 'blacken-mode)))
 
 ;;; clone shim to site-lisp
