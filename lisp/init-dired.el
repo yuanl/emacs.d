@@ -9,7 +9,7 @@
   (when gls (setq insert-directory-program gls)))
 
 (when (maybe-require-package 'diredfl)
-  (after-load 'dired
+  (with-eval-after-load 'dired
     (diredfl-global-mode)
     (require 'dired-x)))
 
@@ -17,7 +17,7 @@
 (define-key ctl-x-map "\C-j" 'dired-jump)
 (define-key ctl-x-4-map "\C-j" 'dired-jump-other-window)
 
-(after-load 'dired
+(with-eval-after-load 'dired
   (setq dired-recursive-deletes 'top)
   (put 'dired-find-alternate-file 'disabled nil)
   (define-key dired-mode-map [mouse-2] 'dired-find-file)
@@ -26,7 +26,7 @@
     (define-key dired-mode-map (kbd "/") 'dired-narrow)))
 
 (when (maybe-require-package 'diff-hl)
-  (after-load 'dired
+  (with-eval-after-load 'dired
     (add-hook 'dired-mode-hook 'diff-hl-dired-mode)))
 
 (provide 'init-dired)
