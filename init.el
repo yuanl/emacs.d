@@ -78,7 +78,7 @@
 
 (require 'init-editing-utils)
 (require 'init-whitespace)
-(require 'init-rime)
+;; (require 'init-rime)
 
 (require 'init-vc)
 ;; (require 'init-darcs)
