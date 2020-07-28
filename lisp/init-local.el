@@ -41,5 +41,11 @@
   (require 'org2ctex)
   (org2ctex-toggle t))
 
+(when (maybe-require-package 'treemacs)
+  (global-set-key (kbd "C-c C-t") 'treemacs)
+  (treemacs-resize-icons 16)
+  (require-package 'treemacs-projectile)
+  (require-package 'treemacs-magit))
+
 (provide 'init-local)
 ;;; init-local.el ends here
