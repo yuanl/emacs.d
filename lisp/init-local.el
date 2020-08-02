@@ -42,7 +42,7 @@
   (org2ctex-toggle t))
 
 (when (maybe-require-package 'treemacs)
-  (global-set-key (kbd "C-c C-t") 'treemacs)
+  (global-set-key (kbd "s-/") 'treemacs)
   (treemacs-resize-icons 16)
   (require-package 'treemacs-projectile)
   (require-package 'treemacs-magit))
