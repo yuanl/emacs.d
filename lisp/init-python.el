@@ -33,5 +33,9 @@
 (when (maybe-require-package 'reformatter)
   (reformatter-define black :program "black"))
 
+(when (maybe-require-package 'lsp-pyright)
+  (eval-after-load 'lsp
+    (require 'lsp-pyright)))
+
 (provide 'init-python)
 ;;; init-python.el ends here

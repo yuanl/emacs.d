@@ -2,24 +2,20 @@
 ;;; Commentary:
 ;;; Code:
 
-(when (require 'nox)
-  (define-key nox-mode-map (kbd "C-M-/") 'nox-show-doc))
+(when (maybe-require-package 'lsp-mode)
+  (require-package 'lsp-pyright)
+  (dolist (hook (list
+                 'c-mode-common-hook
+                 'c-mode-hook
+                 'c++-mode-hook
+                 'sh-mode-hook
+                 'python-mode-hook
+                 'js-mode-hook
+                 ))
+    (add-hook hook '(lambda () #'lsp))))
 
-(dolist (hook (list
-               'js-mode-hook
-               'rust-mode-hook
-               'python-mode-hook
-               'ruby-mode-hook
-               'java-mode-hook
-               'sh-mode-hook
-               'php-mode-hook
-               'c-mode-common-hook
-               'c-mode-hook
-               'c++-mode-hook
-               'arduino-mode-hook
-               'haskell-mode-hook
-               ))
-  (add-hook hook '(lambda () (nox-ensure))))
+;;; Increase the amount of data which Emacs reads from the process
+(setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 (provide 'init-lsp)
 ;;; init-lsp.el ends here
