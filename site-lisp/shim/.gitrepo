@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/twlz0ne/shim.el.git
+	branch = master
+	commit = 88dc3d7f811a544fce2455fef22e8d35e7e95c01
+	parent = 46673bcc81edac86490a74abac6e63a6c9fff488
+	cmdver = 0.1.0
