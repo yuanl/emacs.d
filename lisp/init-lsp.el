@@ -3,7 +3,6 @@
 ;;; Code:
 
 (when (maybe-require-package 'lsp-mode)
-  (require-package 'lsp-pyright)
   (dolist (hook (list
                  'c-mode-common-hook
                  'c-mode-hook
@@ -12,7 +11,7 @@
                  'python-mode-hook
                  'js-mode-hook
                  ))
-    (add-hook hook '(lambda () #'lsp))))
+    (add-hook hook #'lsp)))
 
 ;;; Increase the amount of data which Emacs reads from the process
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
