@@ -38,8 +38,9 @@
   (require 'eaf nil 'noerror))
 
 (when (maybe-require-package 'org2ctex)
-  (require 'org2ctex)
-  (org2ctex-toggle t))
+  (with-eval-after-load 'org
+    (require 'org2ctex)
+    (org2ctex-toggle t)))
 
 (when (maybe-require-package 'treemacs)
   (global-set-key (kbd "s-/") 'treemacs)
