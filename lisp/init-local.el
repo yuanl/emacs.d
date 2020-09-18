@@ -15,10 +15,11 @@
 
 (when (maybe-require-package 'elfeed-goodies)
   (when (maybe-require-package 'elfeed-org)
-    (elfeed-org)
-    (setq rmh-elfeed-org-files (list "~/org/nas/elfeed.org")))
-  (with-eval-after-load 'elfeed
-    (elfeed-goodies/setup)))
+    (with-eval-after-load 'elfeed
+      (elfeed-org)
+      (setq rmh-elfeed-org-files (list "~/org/nas/elfeed.org"))
+      (with-eval-after-load 'elfeed
+        (elfeed-goodies/setup)))))
 
 (with-eval-after-load 'tramp
   (setq tramp-default-method "ssh"))
