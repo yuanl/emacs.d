@@ -18,17 +18,16 @@
     (with-eval-after-load 'elfeed
       (elfeed-org)
       (setq rmh-elfeed-org-files (list "~/org/nas/elfeed.org"))
-      (with-eval-after-load 'elfeed
-        (elfeed-goodies/setup)))))
+      (elfeed-goodies/setup))))
 
 (with-eval-after-load 'tramp
   (setq tramp-default-method "ssh"))
 
-(global-set-key (kbd "s-t") 'eshell)
+(global-set-key (kbd "C-s-t") 'eshell)
 
 (unless (eq system-type 'windows-nt)
   (when (maybe-require-package 'vterm)
-    (global-set-key (kbd "C-s-t") 'vterm)
+    (global-set-key (kbd "s-t") 'vterm)
     (setq vterm-shell (executable-find "fish"))
     ))
 
@@ -45,9 +44,10 @@
 
 (when (maybe-require-package 'treemacs)
   (global-set-key (kbd "s-/") 'treemacs)
-  (treemacs-resize-icons 16)
   (require-package 'treemacs-projectile)
-  (require-package 'treemacs-magit))
+  (require-package 'treemacs-magit)
+  (with-eval-after-load 'treemacs
+    (treemacs-resize-icons 16)))
 
 (provide 'init-local)
 ;;; init-local.el ends here
