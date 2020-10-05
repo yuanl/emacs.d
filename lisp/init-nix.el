@@ -21,6 +21,7 @@
 
         (add-to-list 'company-backends 'company-nixos-options)))))
 
+(add-to-list 'exec-path "~/.nix-profile/bin/")
 
 (provide 'init-nix)
 ;;; init-nix.el ends here
