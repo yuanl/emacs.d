@@ -17,7 +17,7 @@
   (when (maybe-require-package 'elfeed-org)
     (with-eval-after-load 'elfeed
       (elfeed-org)
-      (setq rmh-elfeed-org-files (list "~/org/nas/elfeed.org"))
+      (setq rmh-elfeed-org-files (list "~/org/elfeed.org"))
       (elfeed-goodies/setup))))
 
 (with-eval-after-load 'tramp
